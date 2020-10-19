@@ -8,4 +8,4 @@ pathToMirai=/home/kali/Desktop/MiraiRepository/mirai/MiraiSourceCode
 export pathToMirai
 
 # launching cnc
-/home/kali/Desktop/myMirai/MiraiSourceCode/mirai/debug/cnc
+$pathToMirai/mirai/debug/cnc
