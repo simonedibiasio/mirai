@@ -4,7 +4,7 @@ echo Set Environment Variable
 echo -------------------------------------------------------
 
 # setting path to Mirai source Folder
-pathToMirai=/home/kali/Desktop/myMirai/MiraiSourceCode
+pathToMirai=/home/kali/Desktop/MiraiRepository/mirai/MiraiSourceCode
 export pathToMirai
 
 # Execute these in your ssh terminal, this will add to your ~/.bashrc
