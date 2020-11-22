@@ -49,8 +49,8 @@ printf "\n"
 echo -------------------------------------------------------
 printf "\n"
 sleep 2
-go get github.com/go-sql-driver/mysql
-go get github.com/mattn/go-shellwords
+# go get github.com/go-sql-driver/mysql
+# go get github.com/mattn/go-shellwords
 ./build.sh debug telnet
 printf "\n"
 echo -------------------------------------------------------
