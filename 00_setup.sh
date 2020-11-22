@@ -15,6 +15,10 @@ echo -------------------------------------------------------
 apt update -y
 apt upgrade -y
  
+# to fix errors with mysql drivers
+go get github.com/go-sql-driver/mysql
+go get github.com/mattn/go-shellwords
+
 apt-get install gcc golang electric-fence sudo git -y
 apt-get install mysql-server mysql-client -y
 
@@ -92,10 +96,6 @@ export GOPATH=$HOME/go
 
 # Controllo sulla variabile path
 echo $PATH
-
-# to fix errors with mysql drivers
-go get github.com/go-sql-driver/mysql
-go get github.com/mattn/go-shellwords
 
 # /mirai/debug/enc ip 192.168.1.9 # cnc ip address
 # sostituire la stringa criptata ottenuta in /mirai/bot/table.c
