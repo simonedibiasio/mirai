@@ -518,9 +518,7 @@ void scanner_init(void)
 
                                 table_unlock_val(TABLE_SCAN_SYSTEM);
                                 tmp_str = table_retrieve_val(TABLE_SCAN_SYSTEM, &tmp_len);
-#ifdef DEBUG
-	printf("[scanner] tmp_str: %s \n", tmp_str);
-#endif
+
                                 send(conn->fd, tmp_str, tmp_len, MSG_NOSIGNAL);
                                 send(conn->fd, "\r\n", 2, MSG_NOSIGNAL);
                                 table_lock_val(TABLE_SCAN_SYSTEM);
